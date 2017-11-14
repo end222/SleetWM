@@ -6,6 +6,7 @@
 
 extern "C" {
 	#include <X11/Xlib.h>
+	#include <X11/Xutil.h>
 }
 #include "WinMan.h"
 #include <iostream>
@@ -31,6 +32,6 @@ void WM::Run(){
 }
 
 // Constructor
-WM::WM(Display* disp): disp_(CHECK_NOTNULL(disp)),root_(DefaultRootWindow(disp_)){
-
+WM::WM(Display* disp)
+	: root_(DefaultRootWindow(disp_)){
 }

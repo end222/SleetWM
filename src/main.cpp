@@ -7,10 +7,11 @@
 extern "C" {
 	#include <X11/Xlib.h>
 }
-
+#include <glog/logging.h>
 #include <iostream>
 #include <memory>
-#include <glog/logging>
+
+using namespace std;
 
 int main(int argc, char** argv){
 	::google::InitGoogleLogging(argv[0]);
